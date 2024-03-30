@@ -1,0 +1,278 @@
+/*---------------------------------------------------------------------------
+*                                  KeyFrames
+---------------------------------------------------------------------------*/
+    
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes rotate {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity: .0;
+        }
+
+        to{
+            opacity: 1;
+        }
+    }
+
+/*---------------------------------------------------------------------------
+*                                Font Awesome Page
+---------------------------------------------------------------------------*/
+
+    /* -------------------------------------------------------
+    |                       Page
+    ------------------------------------------------------- */
+
+        #page-fa{
+            padding: ;
+        }
+
+        div#icon-zone .btn {
+            width: clamp(35px, 4vw, 4vw);
+            height: clamp(35px, 4vw, 4vw);
+        }
+
+        #icon-zone button i:not(.switch) {
+            font-size: clamp(20px, 2.3vw, 30px);
+        }
+
+    /* -------------------------------------------------------
+    |                       NavBar
+    ------------------------------------------------------- */
+
+        #alphabeticNav{
+            background-color: #f8f9fc;
+            position: sticky;
+            top: 0px;
+            box-shadow: 8px 8px 5px 0px #0003;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #alphabeticNav #restart{
+            display: inline-flex;
+        }
+
+        #alphabeticNav #search-container{
+            z-index: 2;
+            position: relative;
+            height: 35px;
+            width: 20px;
+            padding: 5px;
+            transition: width .3s;
+            max-width: 23%;
+        }
+
+        #alphabeticNav #search-container #search-wraper{
+            background-color: #fff;
+            border-radius: 2rem;
+            border: 1px solid #585858;
+            position: absolute;
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        #alphabeticNav #search-container #search-respv{
+            height: 25px;
+            position: absolute;
+            top: 0;
+            left: 18px;
+            width: 0;
+            overflow: hidden;
+            opacity: 60%;
+            padding-left: 5px;
+            display: none;
+            transition: width .3s,
+                        opacity .2s;
+        }
+
+        #alphabeticNav #search-container #search-respv:hover,#alphabeticNav #search-container #search-respv:focus-within{
+            opacity: 100%;
+            transition: opacity .2s;
+        }
+
+        #alphabeticNav #search-container #search-wraper i{
+            display: inline;
+            margin: 0px 5px 0px 9px;
+        }
+
+        #alphabeticNav #search-container #search-wraper input{
+            border: unset;
+            width: 100%;
+            transition: width .3s;
+            border-radius: inherit;
+        }
+
+        #alphabeticNav #search-container #search-respv input{
+            height: 25px;
+            border-radius: 2rem;
+            border: 1px solid #595959;
+            padding-left: 15px;
+        }
+
+        #alphabeticNav #search-container #search-wraper input:focus-visible {
+            outline: unset;
+        }
+
+        .maxW{
+            width:100% !important;
+            transition: width .3s;
+        }
+
+        #alphabeticNav ul{
+            display: inline-flex;
+            flex-direction: row;
+            margin-bottom: unset !important;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-inline-start: 10px;
+            padding-inline-end: 10px;
+        }
+
+        #alphabeticNav ul > li{
+            margin: 10px;
+            display: block;
+        }
+
+        #alphabeticNav ul > li > a{
+            font-weight: 900;
+            text-decoration: none;
+            color: #787878;
+        }
+
+        .alphaSec{
+            padding-top: 5%;
+        }
+
+        .alphaSec .guideContainer{
+            margin: 0% 3%;
+        }
+
+        button i.switch{
+            padding: 5px;
+            position: absolute;
+            color: #595959;
+            background-color: #ffed92;
+            border-radius: 2rem;
+            box-shadow: inset 0px 0px 5px #0000005e;
+            font-size: 8px;
+            bottom: -8px;
+            right: -8px;
+        }
+
+        .gy{
+            transition: transform .2s;
+        }
+
+        .gy:hover{
+            transform: rotate(25deg);
+            transition: transform .2s;
+        }
+
+        #empty{
+            margin-bottom: 20%;
+        }
+
+        #dinamic-wrapper .btn{
+            margin: 5px;
+        }
+
+        @media (max-width: 1120px) and (min-width: 1019px){
+            .wrapNav{
+                display: none!important;
+            }
+        }
+
+        @media (max-width: 1020px){
+            #dinamic-wrapper{
+                display: inline-flex !important;
+                width: 100%;
+            }
+
+            #alphabeticNav {
+                flex-direction: column !important;
+                width: 50px !important;
+                padding: 3px 10px 10px 10px !important;
+                height: 100vh !important;
+                overflow: unset !important;
+            }
+
+            #alphabeticNav > * {
+                margin: 2px 0px !important;
+            }
+
+            #alphabeticNav #search-container {
+                height: 25px !important;
+                min-height: 25px !important;
+            }
+
+            #alphabeticNav #search-container #search-wraper {
+                left: -8px !important;
+            }
+
+            #alphabeticNav #search-container #search-respv{
+                display: unset !important;
+            }
+
+            #alphabeticNav #search-container #search-wraper i {
+                margin: 0px 2px 0px 5px !important;
+                font-size: small !important;
+            }
+
+            #alphabeticNav ul {
+                flex-direction: column !important;
+            }
+
+            #alphabeticNav ul#navBtns > li {
+                font-size: clamp(9px, 2.2vh, 2.3vh) !important;
+                margin: 1% !important;
+            }
+
+            #alphabeticNav button{
+                width: 30px !important;
+                padding: 1px !important;
+            }
+
+            #alphabeticNav button > i{
+                font-size: small !important;
+            }
+
+            #icon-zone{
+                padding-left: 30px !important;
+                width: 100%;
+            }
+
+            .showBar{
+                width: unset !important;
+            }
+        }
