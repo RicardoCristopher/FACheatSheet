@@ -59,12 +59,8 @@
 
             if(!control.contains('switch')){
 
-                if(event.target.tagName == 'I'){
-                    let copyText = event.target.parentNode.title;
-                }else{
-                    let copyText = event.target.title;
-                }
-
+                let copyText = event.target.parentNode.title || event.target.title;
+                
                 navigator.clipboard.writeText(copyText)
                     .then(() => {
                         alert("Copied!",'success',false,1500);
